@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ServiceImplementation\**" />
+    <Compile Remove="ServiceInterface\**" />
+    <Compile Remove="ViewModel\**" />
+    <EmbeddedResource Remove="ServiceImplementation\**" />
+    <EmbeddedResource Remove="ServiceInterface\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <None Remove="ServiceImplementation\**" />
+    <None Remove="ServiceInterface\**" />
+    <None Remove="ViewModel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReflectionIT.Mvc.Paging" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PulseProject.infra\PulseDemo.infra.csproj" />
+  </ItemGroup>
+
+</Project>
